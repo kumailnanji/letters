@@ -1,5 +1,7 @@
 # @kumailnanji/letters
 
+[![npm](https://img.shields.io/npm/v/@kumailnanji/letters.svg)](https://www.npmjs.com/package/@kumailnanji/letters)
+
 Animated handwritten text for React. Renders any string as a continuous script animation using Hershey vector font data for layout and kerning, with hand-polished cubic Bézier paths for each letter. Driven by [Framer Motion](https://www.framer.com/motion/).
 
 ```bash
