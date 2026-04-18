@@ -4,6 +4,11 @@
 
 Animated handwritten text for React. Renders any string as a continuous script animation using Hershey vector font data for layout and kerning, with hand-polished cubic Bézier paths for each letter. Driven by [Framer Motion](https://www.framer.com/motion/).
 
+## Demo
+
+<video src="https://raw.githubusercontent.com/kumailnanji/letters/main/docs/demo.mp4" controls muted playsinline width="100%"></video>
+
+
 ```bash
 npm install @kumailnanji/letters framer-motion react react-dom
 ```
