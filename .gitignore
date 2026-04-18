@@ -1,0 +1,16 @@
+node_modules
+dist
+.DS_Store
+*.log
+.env*
+.turbo
+.pnpm-store
+coverage
+
+# Local-only maintainer Cursor rules (public repo — keep personal agent prefs private)
+.cursor/rules/*.local.mdc
+
+# Examples app build artifacts
+examples/**/node_modules
+examples/**/dist
+examples/**/.vite

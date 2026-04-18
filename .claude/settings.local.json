@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm install *)",
+      "Bash(pnpm view *)",
+      "Bash(pnpm typecheck *)",
+      "Bash(pnpm build *)",
+      "Bash(npm pack *)",
+      "Bash(pnpm dev *)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(pkill -f \"vite\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(pnpm create *)",
+      "Bash(rm -rf .git)",
+      "Bash(mv /tmp/letters-demo-claude-bak .claude)",
+      "Bash(pnpm add *)",
+      "Bash(lsof -i :3000 -sTCP:LISTEN -P)"
+    ]
+  }
+}
