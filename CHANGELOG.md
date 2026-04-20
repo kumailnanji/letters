@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+## [0.1.1]
+
+### Added
+
+- Optional `drawWeight` on custom letter paths (`CustomLetterPath` /
+  `ResolvedPath`) to weight subpaths in the stroke-reveal timeline when the
+  naive path-length estimate is misleading.
+
+### Fixed
+
+- Lowercase **t** crossbar: use an explicit `L` segment instead of `H` so
+  `estimatePathLength` counts the bar; pair with `drawWeight` on that path so
+  the crossbar no longer snaps or races the stem during animation.
+
 ## [0.1.0]
 
 ### Added

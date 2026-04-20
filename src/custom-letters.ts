@@ -4,6 +4,8 @@ export type CustomLetterPath = {
   d: string;
   reverse?: boolean;
   dot?: { cx: number; cy: number; r: number };
+  /** Override naive path-length weight for stroke timeline (e.g. crossbars). */
+  drawWeight?: number;
 };
 
 export type CustomLetterEntry = {
@@ -15,6 +17,7 @@ export type ResolvedPath = {
   strokeWidth: number;
   reverse?: boolean;
   dot?: { cx: number; cy: number; r: number };
+  drawWeight?: number;
 };
 
 export function getCustomLetter(
@@ -156,11 +159,11 @@ export const customLetters: Record<string, CustomLetterEntry> = {
   },
   t: {
     paths: [
-      { d: "M -0.3363 4.3313 C 1.6735 1.5264 1 2.75 2 1 C 3 -0.75 3.5 -2 4 -3" },
-      { d: "M 4 -3 C 5.25 -6.25 7.75 -14.25 7 -12" },
-      { d: "M 7.0006 -12 C 6.2506 -9.75 2.5006 1 1.0006 6 C -0.1668 9.8915 4.0594 9.2305 5.3314 8.5458 C 6.17 8.0943 11.5921 5.2758 7.4842 2.2896" },
-      { d: "M 9.0061 3.9337 C 7.2834 0.8638 -0.2591 -0.8982 0.9668 -4.1939" },
-      { d: "M 1 -4 C 0.75 -6 6.25 -4 8 -4" },
+      { d: "M 0 4.5 C 2.1153 1.327 4.5767 -2.4419 6 -6 C 6.3998 -6.9996 8.4714 -12 6 -12 C 0.862 -12 1.2427 -1.1552 1 2 C 0.9082 3.1936 -0.0933 9.6036 2.5407 9.194 C 4.4865 8.8914 7.5 5.5748 8.5 4.0374" },
+      {
+        d: "M -2 -0.9626 L 7 -0.9626",
+        drawWeight: 16,
+      },
     ],
   },
   u: {

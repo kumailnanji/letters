@@ -1,7 +1,7 @@
 {
   "name": "@kumailnanji/letters",
-  "version": "0.1.0",
-  "description": "Animated handwritten text for React — Hershey layout + hand-tuned Bézier glyphs, driven by Framer Motion.",
+  "version": "0.1.1",
+  "description": "Animated handwritten text for React.",
   "license": "MIT",
   "author": "Kumail Nanji",
   "repository": {
@@ -18,7 +18,8 @@
     "animation",
     "handwriting",
     "hershey",
-    "framer-motion"
+    "framer-motion",
+    "apple hello"
   ],
   "type": "module",
   "sideEffects": false,

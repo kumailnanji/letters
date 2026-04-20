@@ -168,9 +168,11 @@ export function computeRenderItems(
         const resolved = getCustomLetter(slot.char, sw);
         if (resolved) {
           info.customPaths = resolved.paths;
-          const lens = resolved.paths.map((p: ResolvedPath) =>
-            p.dot ? 0.5 : Math.max(estimatePathLength(p.d), 0.5)
-          );
+          const lens = resolved.paths.map((p: ResolvedPath) => {
+            if (p.dot) return 0.5;
+            if (p.drawWeight != null) return Math.max(p.drawWeight, 0.1);
+            return Math.max(estimatePathLength(p.d), 0.5);
+          });
           info.customLengths = lens;
           info.customTotalLen = lens.reduce(
             (a: number, b: number) => a + b,
